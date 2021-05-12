@@ -1,14 +1,8 @@
 function Sum(a){
 	let result = a;
-	
-	function plus(b){
-		result+=b;
-		return plus;
+	return function plus(b){
+		return result+=b;
 	}
-	plus.toString = function(){
-		return result;
-	}
-	return plus;
 }
 
 var filter = function(arr, callback){
